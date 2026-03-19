@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'package:phosphor_flutter/phosphor_flutter.dart';
 import '../../core/theme/synthwave_theme.dart';
 
 class SettingsPage extends StatelessWidget {
@@ -41,7 +40,7 @@ class SettingsPage extends StatelessWidget {
           Text(
             'Support Development',
             style: theme.textTheme.titleMedium?.copyWith(
-              color: SynthwaveTheme.neonPink,
+              color: SynthwaveColors.neonPink,
               fontWeight: FontWeight.bold,
             ),
           ),
@@ -50,7 +49,7 @@ class SettingsPage extends StatelessWidget {
           // Buy Me a Coffee
           _buildSettingCard(
             context: context,
-            icon: PhosphorIcons.coffee(),
+            icon: Icons.coffee,
             iconColor: const Color(0xFFFF6B35),
             title: 'Buy Me a Coffee',
             subtitle: 'Support development with a donation',
@@ -62,7 +61,7 @@ class SettingsPage extends StatelessWidget {
           // Open Source
           _buildSettingCard(
             context: context,
-            icon: PhosphorIcons.gitHubLogo(),
+            icon: Icons.code,
             iconColor: Colors.white,
             title: 'Open Source',
             subtitle: 'View source code on GitHub',
@@ -75,7 +74,7 @@ class SettingsPage extends StatelessWidget {
           Text(
             'About',
             style: theme.textTheme.titleMedium?.copyWith(
-              color: SynthwaveTheme.neonPink,
+              color: SynthwaveColors.neonPink,
               fontWeight: FontWeight.bold,
             ),
           ),
@@ -107,7 +106,7 @@ class SettingsPage extends StatelessWidget {
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(16),
         side: BorderSide(
-          color: SynthwaveTheme.electricPurple.withOpacity(0.3),
+          color: SynthwaveColors.neonPurple.withOpacity(0.3),
           width: 1,
         ),
       ),
@@ -148,7 +147,7 @@ class SettingsPage extends StatelessWidget {
                 ),
               ),
               Icon(
-                PhosphorIcons.arrowSquareOut(),
+                Icons.open_in_new,
                 color: iconColor,
                 size: 20,
               ),
@@ -167,7 +166,7 @@ class SettingsPage extends StatelessWidget {
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(16),
         side: BorderSide(
-          color: SynthwaveTheme.electricPurple.withOpacity(0.3),
+          color: SynthwaveColors.neonPurple.withOpacity(0.3),
           width: 1,
         ),
       ),
@@ -177,21 +176,21 @@ class SettingsPage extends StatelessWidget {
           children: [
             _buildAboutRow(
               context: context,
-              icon: PhosphorIcons.info(),
+              icon: Icons.info_outline,
               label: 'Version',
               value: '1.0.0',
             ),
             const Divider(height: 24),
             _buildAboutRow(
               context: context,
-              icon: PhosphorIcons.code(),
+              icon: Icons.code,
               label: 'Built with',
               value: 'Flutter & ❤️',
             ),
             const Divider(height: 24),
             _buildAboutRow(
               context: context,
-              icon: PhosphorIcons.paintBrush(),
+              icon: Icons.palette,
               label: 'Theme',
               value: 'Synthwave',
             ),
@@ -211,7 +210,7 @@ class SettingsPage extends StatelessWidget {
     
     return Row(
       children: [
-        Icon(icon, color: SynthwaveTheme.cyan, size: 20),
+        Icon(icon, color: SynthwaveColors.neonCyan, size: 20),
         const SizedBox(width: 12),
         Text(
           label,
@@ -238,7 +237,7 @@ class SettingsPage extends StatelessWidget {
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(16),
         side: BorderSide(
-          color: SynthwaveTheme.neonPink.withOpacity(0.3),
+          color: SynthwaveColors.neonPink.withOpacity(0.3),
           width: 1,
         ),
       ),
@@ -255,7 +254,7 @@ class SettingsPage extends StatelessWidget {
                 borderRadius: BorderRadius.all(Radius.circular(16)),
               ),
               child: const Icon(
-                PhosphorIcons.heartFill(),
+                Icons.favorite,
                 color: Colors.white,
                 size: 32,
               ),
